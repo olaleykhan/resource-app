@@ -2,6 +2,7 @@
   <div>
     <the-header content="Programming Learning Resouces"></the-header>
     <the-resources> </the-resources>
+    <remove-tab></remove-tab>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import TheResources from "./components/learning-resources/TheResources";
 // import TheHeader from "./layouts/TheHeader";
 import TheHeader from "./layouts/TheHeader.vue";
+import RemoveTab from "./components/RemoveTab";
 
 export default {
   name: "App",
   components: {
     TheResources,
     TheHeader,
+    RemoveTab,
   },
 };
 </script>
