@@ -1,14 +1,16 @@
 <template>
   <li>
-    <header>
-      <h3>{{ title }}</h3>
-      <button>Delete</button>
-    </header>
+    <base-card>
+      <header>
+        <h3>{{ title }}</h3>
+        <base-button mode="flat">Delete</base-button>
+      </header>
 
-    <p>{{ description }}</p>
-    <nav>
-      <a :href="link">View Resource </a>
-    </nav>
+      <p>{{ description }}</p>
+      <nav>
+        <a :href="link">View Resource </a>
+      </nav>
+    </base-card>
   </li>
 </template>
 
@@ -25,9 +27,6 @@ export default {
 </script>
 
 <style scoped>
-li {
-  /* background-color: aquamarine; */
-}
 header {
   display: flex;
   text-align: center;
@@ -37,7 +36,7 @@ header {
   margin: 0 auto;
   align-items: center;
 }
-button {
+/* button {
   outline: none;
   padding: 4px 10px;
   border: none;
@@ -51,5 +50,5 @@ button:hover {
   cursor: pointer;
   font-size: 1em;
   font-weight: bold;
-}
+} */
 </style>

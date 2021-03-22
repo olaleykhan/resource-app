@@ -1,45 +1,42 @@
 <template>
   <div>
-    <display-resources :resources="storedResources"> </display-resources>
+    <the-header content="Programming Learning Resouces"></the-header>
+    <the-resources> </the-resources>
   </div>
 </template>
 
 <script>
-import DisplayResources from "./components/DisplayResources";
+import TheResources from "./components/learning-resources/TheResources";
+// import TheHeader from "./layouts/TheHeader";
+import TheHeader from "./layouts/TheHeader.vue";
+
 export default {
   name: "App",
   components: {
-    DisplayResources,
-  },
-  data() {
-    return {
-      storedResources: [
-        {
-          id: "vue-site",
-          title: " Vue resource",
-          description: "Official guide of the vue people",
-          link: "www.vuejs.org",
-        },
-        {
-          id: "google-site",
-          title: " Google resource",
-          description: "search stuff on google",
-          link: "www.google.com",
-        },
-      ],
-    };
+    TheResources,
+    TheHeader,
   },
 };
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 a {
   text-decoration: none;

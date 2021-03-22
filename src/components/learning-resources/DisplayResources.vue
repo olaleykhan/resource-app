@@ -17,7 +17,7 @@
 <script>
 import DisplayResource from "./DisplayResource";
 export default {
-  props: ["resources"],
+  inject: ["resources"],
   name: "DisplayResources",
   components: {
     DisplayResource,
