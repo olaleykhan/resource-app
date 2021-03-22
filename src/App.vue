@@ -1,17 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <display-resources :resources="storedResources"> </display-resources>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DisplayResources from "./components/DisplayResources";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    DisplayResources,
+  },
+  data() {
+    return {
+      storedResources: [
+        {
+          id: "vue-site",
+          title: " Vue resource",
+          description: "Official guide of the vue people",
+          link: "www.vuejs.org",
+        },
+        {
+          id: "google-site",
+          title: " Google resource",
+          description: "search stuff on google",
+          link: "www.google.com",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -22,5 +40,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+a {
+  text-decoration: none;
+  color: orange;
+  /* color: greenyellow; */
+}
+li {
+  list-style-type: none;
 }
 </style>
