@@ -2,7 +2,12 @@
   <div>
     <the-header content="Programming Learning Resouces"></the-header>
     <the-resources> </the-resources>
-    <remove-tab></remove-tab>
+    <remove-tab>
+      <hr />
+      <br />
+      <h1>remove</h1>
+      <hr />
+    </remove-tab>
   </div>
 </template>
 

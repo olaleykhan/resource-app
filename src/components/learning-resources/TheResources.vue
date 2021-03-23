@@ -35,7 +35,7 @@ export default {
   //   props: ["resources"],
   data() {
     return {
-      selectedTab: "add-resources",
+      selectedTab: "add-resource",
       storedResources: [
         {
           id: "vue-site",
@@ -55,12 +55,17 @@ export default {
   provide() {
     return {
       resources: this.storedResources,
+      addResourceData: this.addResourceData,
     };
   },
   methods: {
     changeSelectedTab(tabName) {
       console.log(tabName);
       this.selectedTab = tabName;
+    },
+    addResourceData(obj) {
+      this.storedResources.push(obj);
+      this.selectedTab = "display-resources";
     },
   },
   computed: {
@@ -79,11 +84,6 @@ export default {
         return null;
       } else return "flat";
     },
-    //   currentProperties: function() {
-    //             if (this.currentComponent === 'myComponent') {
-    //             return { foo: 'bar' }
-    //             }
-    //         }
   },
 };
 </script>

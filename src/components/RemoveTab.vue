@@ -1,7 +1,7 @@
 <template>
   <div>
     <base-button>
-      <h1>Remove</h1>
+      <slot> </slot>
     </base-button>
   </div>
 </template>
